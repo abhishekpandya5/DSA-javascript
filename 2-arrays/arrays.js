@@ -38,22 +38,32 @@ usually doubles the space.
 
 // ------------------------------------------------------------
 
-// Optional classes in JS
  
-// Reference types
-[] === [] // false due to different reference
+/* 
+----------Primitive types---------
 
+ Primitive types are defined by the programming language like,
+1, true, null, undefined, false, any string value
+
+eg. var number = 1;    1 is primitive type or immutable
+
+
+ --------Reference types or Non primitive types---------
+ 
+ Reference types are not defined by prog lang.
+Objects are called the reference types in javascript.
+e.g. var obj1 = { value: 10};
+
+*/
+
+[] === [] // false due to different reference types  as Arrays are also Objects in javascript
+ 
 var obj1 = { value: 10};
-var obj2 = obj1.value;
+var obj2 = obj1;         // we are just storing the reference of obj1 in obj2.
 var obj3 = {value: 10};
 
 obj1 === obj2 // true
 obj1 === obj3 // false
 
 obj1.value = 15;
-obj2.value; // 15
-
-// Context vs scope - wip
-
-
-
+obj2.value; // 15  (references the same object)
