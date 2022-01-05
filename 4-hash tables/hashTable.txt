@@ -1,0 +1,55 @@
+/* 
+Hash Table, hash maps, maps, unordered maps, dictionary, objects are same.
+Hash table uses some hash function to store key value pairs of data in memory.
+
+Hash function:
+function that generates a value of fixed length for each input it gets.
+https://www.md5hashgenerator.com/
+
+unlike arrays where we had ordered indexs, in hash table we need to give the key to the hash function and get the item.
+
+As hash function is written in every language, it is using optimum hashing function that is really fast.
+
+*/
+
+// Hash Tables are objects in javascript.
+let user = {
+  age: 20,
+  hobby: "gardening",
+  speak: function() { 
+    console.log("Hello");
+  }
+}
+
+console.log(user.age); // O(1)
+user.id = "12345anjahsj"; // O(1)
+user.speak(); // O(1)
+
+/*
+ insert - O(1)
+ lookup - O(1) ---------- O(n) due to hash collisions
+ delete - O(1)
+ search - O(1)
+
+ occasionally lookup can be O(n) due to hash function as a result of collisions. 
+ */
+
+/* 
+Main problems with hash tables are hash collisions (data chaining)
+ collision can happen in any hash tables 
+ https://en.wikipedia.org/wiki/Hash_collision
+*/
+
+// In js objects, if we pass functions or numbers as keys, it gets stringify.
+// Objects only allow keys in string format.
+
+
+// in ES6
+const a = new Map();
+const b = new Set();
+
+// Map: 
+// Diff btw Object and Map is that, map allows any data type as the key.
+// Map maintains insertion order.
+
+// Set :  it only stores keys, no values.

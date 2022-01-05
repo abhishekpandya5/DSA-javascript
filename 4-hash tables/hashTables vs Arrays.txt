@@ -1,0 +1,10 @@
+        Arrays                             Hash tables
+
+search             O(n)              search            O(1)
+lookup             O(1)              insert            O(1)  (very rare O(n))
+push               O(1)*             lookup            O(1)
+insert             O(n)              delete            O(1)
+delete             O(n)
+
+
+* can be O(n)
