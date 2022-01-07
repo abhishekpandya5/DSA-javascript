@@ -1,0 +1,8 @@
+const basket = ['apples', 'grapes', 'banana'];
+
+linked list: apples --> grapes --> banana
+
+apples
+8974 --> grapes
+          8788 --> banana
+                    889 --> null
