@@ -6,3 +6,57 @@ apples
 8974 --> grapes
           8788 --> banana
                     889 --> null
+
+why linked lists?
+
+Linked lists nodes are scattered all over the memory like hash tables.
+
+So iterating or traversing through linked lists are little bit slow as compared to arrays.
+
+Even though they are both technically both O(n), however the insertions we do in the middle of a linked list is a lot better than arrays.
+
+In case of Hash tables, just like hash tables when we insert a element in linked list, it is scattered all over the memory and we just keep adding it and we dont have to do any shifting of indexes just like we did in the arrays.
+
+We can easily delete nodes in linked lists as compared to arrays but the one advantage over hash tables is that there is some sort of order in linked list, each node points to the next node so we can have sorted data unlike hash tables.
+
+So,
+
+Big O for prepend = O(1)
+append = O(1)
+lookup = O(n)   traverse from head to tail
+insert = O(n)   dont know how long is the linked list
+delete = O(n)
+
+so how it is better if both hash tables and linkedlist have O(n)?
+
+----------------------Pointer----------------------: 
+Pointer is simply a reference to another place in memory or another object or another node in memory.
+
+
+In JS, pointer is represented as,
+
+const obj1 = { a: true };
+const obj2 = obj1;
+obj2 is the reference for obj1
+
+Here, obj2 is the pointer which points to the obj1 in memory.
+ 
+ It is not copying of obects.
+
+ if,
+ obj1.test = "hello";
+
+ then,  obj2 = { a: true, test: "hello" };
+        obj1 = { a: true, test: "hello" };
+
+
+delete obj1;
+console.log(obj2); //  { a: true, test: "hello" }
+
+as obj2 is still pointing to the location in the memory
+
+now if we assign, 
+obj2 = "hello"; then
+{ a: true, test: "hello" } is garbage collected as obj2 is just a string now. and old reference to the object is lost.
+------------------------------------------------------
+
